@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Email Verification</title>
+    <style>
+        
+
+        .outer-container {
+            background-color: #edf2f7;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 70px;
+        }
+
+        .inner-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            
+        }
+        p {
+            text-align: start;
+            font-size: 16px;
+        }
+        h2{
+            text-align: start;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+            text-align: center !important;
+        }
+        .headerTitle{
+            text-align: center !important;
+        }
+        .customVerification{
+            font-size: 12px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <h2 class="headerTitle">Trackagram</h2>
+        <div class="inner-container">
+            <h2>Hello, <%= name %>!</h2>
+            <p>Please click the button below to verify your email address.</p>
+
+           
+    <a href="<%= link %>" style="background-color: #008CBA; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font: size 16px; display: inline-block;">Verify Email Address</a>
+        
+<p>If you did not create an account, no further action is required.</p>
+            <p>Regards,<br>Trackagram</p>
+            <hr>
+            <p class="customVerification">If you're having trouble clicking the "Verify Email Address" button, copy and paste the URL below into your web browser:<a href="<%= link %>"><%= link %></a></p>
+            
+        </div>
+        <p class="copyright">&copy; <%= new Date().getFullYear() %> Trackagram. All rights reserved.</p>
+    </div>
+</body>
+</html>
+
+

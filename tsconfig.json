@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs",
+      "outDir": "dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "types": ["node", "express", "sequelize", "mysql2"]
+    }
+  }
+  

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head></head>
+    <body style="font-family: 'Open Sans', Arial, sans-serif;letter-spacing:.01px">
+        <style>
+        </style>
+        <p>
+            <% if (content && content.includes('\n')) {
+                const guestListArray = content.split('\n');
+                guestListArray.forEach((line) => { %>
+                    <%  if (line !=='') { %>
+                        <%= line %><br />
+                    <%  } %>
+                <% });
+            } else if (content) { %>
+                <%= content %>
+            <% } %>
+
+            <% if (djNames && djNames.length > 0) { %>
+                <p>
+                    <% djNames.forEach((name) => { %>
+                        <strong><%= name %></strong><br />
+                    <% }); %>
+                </p>
+            <% } %>
+            
+        </p>
+    </body>
+</html>
