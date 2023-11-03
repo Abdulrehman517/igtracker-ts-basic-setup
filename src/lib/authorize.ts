@@ -2,6 +2,12 @@ import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import settings from '../config/settings';
 
+declare module 'express' {
+  interface Request {
+    user?: any;
+  }
+}
+
 export const authorize = (options: { paths: string[] }) => {
   return (req: Request, res: Response, next: NextFunction) => {
     const path = req.path;
